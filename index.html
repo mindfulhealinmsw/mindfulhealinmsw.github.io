@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mindful Healing MSW - Clinical Social Work Portfolio">
+  <meta name="description" content="mindfulhealingmsw | Clinical Social Work Portfolio">
   <title>mindfulhealingmsw | Clinical Social Work Portfolio</title>
 
   <style>
@@ -13,6 +13,7 @@
       --sage: #eaf1e9;
       --cream: #faf9f5;
       --white: #ffffff;
+      --border: #e0e8df;
     }
 
     * {
@@ -30,10 +31,12 @@
       color: var(--dark);
     }
 
+    /* HEADER */
+
     header {
       background: var(--white);
-      padding: 24px 6%;
-      border-bottom: 1px solid #e2e8e2;
+      padding: 25px 6%;
+      border-bottom: 1px solid var(--border);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -43,29 +46,76 @@
 
     .brand {
       font-size: 23px;
-      font-weight: bold;
+      font-weight: 700;
+      letter-spacing: -0.5px;
       color: #355c49;
+      text-transform: lowercase;
     }
+
+    /* NAVIGATION */
 
     .main-nav {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
-      gap: 16px;
+      flex-wrap: wrap;
+      gap: 28px;
     }
 
-    .main-nav a {
+    .main-nav a,
+    .nav-dropdown summary {
+      font-size: 14px;
+      font-weight: 600;
       color: #355c49;
       text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
+      cursor: pointer;
     }
 
     .main-nav a:hover,
-    .main-nav a:focus-visible {
+    .main-nav a:focus-visible,
+    .nav-dropdown summary:hover {
       color: #759b80;
-      text-decoration: underline;
     }
+
+    .nav-dropdown {
+      position: relative;
+    }
+
+    .nav-dropdown summary {
+      list-style: none;
+    }
+
+    .nav-dropdown summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .nav-dropdown summary::after {
+      content: " ▾";
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      right: 0;
+      top: 30px;
+      min-width: 195px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      z-index: 100;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 11px 12px;
+      border-radius: 6px;
+    }
+
+    .dropdown-menu a:hover {
+      background: var(--sage);
+    }
+
+    /* HERO */
 
     .hero {
       min-height: 75vh;
@@ -124,10 +174,12 @@
       background: #355c49;
     }
 
+    /* SECTIONS */
+
     section {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
-      padding: 75px 8%;
+      padding: 75px 6%;
       scroll-margin-top: 20px;
     }
 
@@ -156,7 +208,7 @@
     .card {
       background: white;
       padding: 28px;
-      border: 1px solid #e0e8df;
+      border: 1px solid var(--border);
       border-radius: 14px;
     }
 
@@ -169,6 +221,18 @@
       font-size: 15px;
     }
 
+    /* EDUCATION */
+
+    .education-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .education-grid .card {
+      padding: 25px;
+    }
+
+    /* CLINICAL INTERESTS */
+
     .tag-list {
       display: flex;
       flex-wrap: wrap;
@@ -177,7 +241,7 @@
     }
 
     .tag {
-      background: #eaf1e9;
+      background: var(--sage);
       color: #355c49;
       padding: 12px 18px;
       border-radius: 25px;
@@ -198,17 +262,23 @@
       color: #355c49;
     }
 
+    /* FOOTER */
+
     footer {
-      background: var(--dark);
-      color: white;
+      background: #2d4237;
+      color: #ffffff;
       text-align: center;
-      padding: 30px 20px;
+      padding: 25px 20px;
     }
 
     footer p {
-      font-size: 14px;
-      margin: 5px 0;
+      font-size: 16px;
+      font-weight: 500;
+      margin: 8px 0;
+      line-height: 1.5;
     }
+
+    /* RESPONSIVE DESIGN */
 
     @media (max-width: 900px) {
       header {
@@ -218,6 +288,7 @@
 
       .main-nav {
         justify-content: center;
+        gap: 18px;
       }
 
       .hero {
@@ -231,7 +302,8 @@
         height: 300px;
       }
 
-      .card-grid {
+      .card-grid,
+      .education-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -246,11 +318,16 @@
       }
 
       .main-nav {
-        gap: 12px;
+        gap: 14px;
       }
 
-      .main-nav a {
-        font-size: 12px;
+      .main-nav a,
+      .nav-dropdown summary {
+        font-size: 13px;
+      }
+
+      .dropdown-menu {
+        right: 0;
       }
     }
   </style>
@@ -258,19 +335,25 @@
 
 <body>
 
-  <!-- HEADER AND NAVIGATION -->
+  <!-- HEADER -->
   <header>
-    <div class="brand">Mindful Healing MSW</div>
+    <div class="brand">mindfulhealingmsw</div>
 
     <nav class="main-nav" aria-label="Main navigation">
       <a href="#home">Home</a>
-      <a href="#about">About Me</a>
+      <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
-      <a href="#interests">Clinical Interests</a>
-      <a href="#resume">Résumé</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
+
+      <details class="nav-dropdown">
+        <summary>More</summary>
+        <div class="dropdown-menu">
+          <a href="#interests">Clinical Interests</a>
+          <a href="#resume">Résumé</a>
+          <a href="#publications">Publications</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </details>
     </nav>
   </header>
 
@@ -284,7 +367,7 @@
         <h1>Compassion.<br>Connection. Growth.</h1>
 
         <p>
-          Welcome to Mindful Healing MSW.
+          Welcome to mindfulhealingmsw.
           I am a Master of Social Work student
           pursuing clinical practice with a focus
           on behavioral health, emotional well-being,
@@ -303,7 +386,7 @@
       >
     </div>
 
-    <!-- ABOUT ME -->
+    <!-- ABOUT -->
     <section id="about">
       <h2>About Me</h2>
 
@@ -333,7 +416,7 @@
       </p>
     </section>
 
-    <!-- CLINICAL AND PROFESSIONAL EXPERIENCE -->
+    <!-- EXPERIENCE -->
     <div class="soft-section">
       <section id="experience">
         <h2>Clinical &amp; Professional Experience</h2>
@@ -379,9 +462,7 @@
 
           <div class="card">
             <h3>Crisis Support Experience</h3>
-            <div class="muted">
-              Crisis Text Line
-            </div>
+            <div class="muted">Crisis Text Line</div>
             <p>
               Gained experience in empathetic
               communication, active listening,
@@ -393,9 +474,7 @@
 
           <div class="card">
             <h3>Peer Support Experience</h3>
-            <div class="muted">
-              7 Cups
-            </div>
+            <div class="muted">7 Cups</div>
             <p>
               Provided supportive listening and
               compassionate communication,
@@ -413,7 +492,7 @@
     <section id="education">
       <h2>Education</h2>
 
-      <div class="card-grid">
+      <div class="card-grid education-grid">
 
         <div class="card">
           <h3>Master of Social Work (MSW)</h3>
@@ -421,23 +500,26 @@
             Boston University School of Social Work
           </div>
           <p>
-            Clinical Practice|Behavioral Health Specialization
+            Clinical Practice |
+            Behavioral Health Specialization
           </p>
           <p>Expected Graduation: December 2027</p>
         </div>
 
         <div class="card">
-      <h3>Master of Science in Health Informatics (MSHI)</h3>
-      <div class="muted">
-        Northeastern University
-      </div>
-      <p>Graduated: May 2022</p>
-      </div>
+          <h3>Master of Science in Health Informatics (MSHI)</h3>
+          <div class="muted">
+            Northeastern University
+          </div>
+          <p>Health Informatics</p>
+        </div>
 
         <div class="card">
-          <h3>Bachelor of Science in Health Science</h3>
-          <div class="muted">Northeastern University</div>
-          <p>Graduated: May 2018</p>
+          <h3>Bachelor of Science (BS)</h3>
+          <div class="muted">
+            Northeastern University
+          </div>
+          <p>Health Science</p>
         </div>
 
       </div>
@@ -517,7 +599,7 @@
       <h2>Contact &amp; Professional Networking</h2>
 
       <p>
-        Thank you for visiting Mindful Healing MSW.
+        Thank you for visiting mindfulhealingmsw.
         I welcome opportunities for professional
         networking, collaboration, and
         continued learning in clinical social work.
@@ -534,9 +616,8 @@
   <!-- FOOTER -->
   <footer>
     <p>mindfulhealingmsw</p>
-    <p>© Sumit Barua | 2026-2027</p>
+    <p>&copy; Sumit Barua | 2026-2027</p>
   </footer>
 
 </body>
 </html>
-
