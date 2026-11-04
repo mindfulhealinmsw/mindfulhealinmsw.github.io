@@ -6,7 +6,6 @@
   <meta name="description" content="mindfulhealingmsw | Clinical Social Work Portfolio">
   <title>mindfulhealingmsw | Clinical Social Work Portfolio</title>
 
-  <!-- Social Media Icons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -248,6 +247,27 @@
       margin: 0 0 22px;
     }
 
+    /* ABOUT */
+
+    .about-section h2 {
+      font-size: 30px;
+      margin-bottom: 22px;
+    }
+
+    .about-placeholder {
+      max-width: 850px;
+      padding: 25px 28px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: white;
+    }
+
+    .about-placeholder p {
+      color: var(--muted);
+      font-size: 16px;
+      margin: 0;
+    }
+
     /* EDUCATION */
 
     .education-grid {
@@ -457,6 +477,7 @@
       }
 
       .introduction-section h2,
+      .about-section h2,
       .clinical-section h2 {
         font-size: 26px;
       }
@@ -486,14 +507,13 @@
 
     <nav class="main-nav" aria-label="Main navigation">
       <a href="#home">Home</a>
-      <a href="#about">Introduction</a>
+      <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#education">Education</a>
 
       <details class="nav-dropdown">
         <summary>More</summary>
         <div class="dropdown-menu">
-          <a href="#interests">Clinical Interests</a>
           <a href="#resume">Résumé</a>
           <a href="#publications">Publications</a>
           <a href="#contact">Contact</a>
@@ -520,7 +540,7 @@
           and person-centered care.
         </p>
 
-        <a class="button" href="#about">
+        <a class="button" href="#introduction">
           Learn More About Me
         </a>
       </div>
@@ -534,7 +554,7 @@
 
     <!-- INTRODUCTION -->
 
-    <section id="about" class="introduction-section">
+    <section id="introduction" class="introduction-section">
       <h2>Introduction</h2>
 
       <p>
@@ -584,6 +604,19 @@
         toward the changes that matter most to them,
         one step at a time.
       </p>
+    </section>
+
+    <!-- ABOUT - PERSONAL CONTENT TO BE ADDED -->
+
+    <section id="about" class="about-section">
+      <h2>About</h2>
+
+      <div class="about-placeholder">
+        <p>
+          A more personal introduction will be
+          added to this section.
+        </p>
+      </div>
     </section>
 
     <!-- EXPERIENCE -->
@@ -721,7 +754,7 @@
       </div>
     </section>
 
-    <!-- CLINICAL INTERESTS -->
+    <!-- CLINICAL INTERESTS - STILL ON WEBSITE -->
 
     <div class="soft-section">
       <section id="interests" class="clinical-section">
@@ -735,8 +768,6 @@
           strengths-based perspective.
         </p>
 
-        <!-- SPECIALTIES -->
-
         <div class="clinical-group">
           <h3>Specialties</h3>
 
@@ -748,8 +779,6 @@
             <span class="clinical-tag">Behavioral Issues</span>
           </div>
         </div>
-
-        <!-- ADDITIONAL FOCUS AREAS -->
 
         <div class="clinical-group">
           <h3>Additional Focus Areas</h3>
@@ -763,8 +792,6 @@
         </div>
 
         <hr class="clinical-divider">
-
-        <!-- TREATMENT APPROACHES -->
 
         <div class="clinical-group">
           <h3>Treatment Approaches</h3>
