@@ -1,34 +1,71 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <title>Mindful Healing MSW | Clinical Social Work</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mindful Healing MSW - Clinical Social Work Portfolio">
+  <title>Mindful Healing MSW | Clinical Social Work Portfolio</title>
 
   <style>
+    :root {
+      --dark: #2d4237;
+      --green: #436b59;
+      --sage: #eaf1e9;
+      --cream: #faf9f5;
+      --white: #ffffff;
+    }
+
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #faf9f5;
-      color: #2d4237;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--dark);
     }
 
     header {
-      background: white;
-      padding: 25px 8%;
+      background: var(--white);
+      padding: 24px 6%;
       border-bottom: 1px solid #e2e8e2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
     .brand {
-      font-size: 24px;
+      font-size: 23px;
       font-weight: bold;
       color: #355c49;
+    }
+
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .main-nav a {
+      color: #355c49;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      color: #759b80;
+      text-decoration: underline;
     }
 
     .hero {
@@ -38,7 +75,7 @@
       justify-content: center;
       gap: 60px;
       padding: 70px 8%;
-      background: #eaf1e9;
+      background: var(--sage);
     }
 
     .hero-text {
@@ -64,25 +101,19 @@
       line-height: 1.8;
     }
 
-    .photo-placeholder {
+    .profile-photo {
       width: 300px;
       height: 370px;
       border-radius: 18px;
-      background: #d3e2d5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #527a62;
-      flex-shrink: 0;
       object-fit: cover;
       object-position: center;
+      flex-shrink: 0;
     }
 
     .button {
       display: inline-block;
       margin-top: 20px;
-      background: #436b59;
+      background: var(--green);
       color: white;
       padding: 14px 25px;
       border-radius: 7px;
@@ -90,34 +121,137 @@
       font-weight: bold;
     }
 
+    .button:hover {
+      background: #355c49;
+    }
+
     section {
       max-width: 1100px;
       margin: auto;
-      padding: 70px 8%;
+      padding: 75px 8%;
+      scroll-margin-top: 20px;
     }
 
     h2 {
       font-size: 32px;
-      color: #2d4237;
+      margin-top: 0;
+    }
+
+    h3 {
+      color: #355c49;
+      margin-bottom: 8px;
+    }
+
+    .section-intro {
+      max-width: 750px;
+      color: #52685b;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border: 1px solid #e0e8df;
+      border-radius: 14px;
+    }
+
+    .card p {
+      margin-bottom: 0;
+    }
+
+    .muted {
+      color: #607467;
+      font-size: 15px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .tag {
+      background: #eaf1e9;
+      color: #355c49;
+      padding: 12px 18px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .soft-section {
+      background: #f0f4ef;
+    }
+
+    .soft-section section {
+      padding-top: 75px;
+      padding-bottom: 75px;
+    }
+
+    a {
+      color: #355c49;
     }
 
     footer {
-      background: #2d4237;
+      background: var(--dark);
       color: white;
       text-align: center;
-      padding: 25px;
+      padding: 30px 20px;
     }
 
-    @media (max-width: 800px) {
+    footer p {
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .main-nav {
+        justify-content: center;
+      }
+
       .hero {
         flex-direction: column-reverse;
         gap: 30px;
         text-align: center;
       }
 
-      .photo-placeholder {
+      .profile-photo {
         width: 250px;
         height: 300px;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 50px 6%;
+      }
+
+      section {
+        padding: 55px 6%;
+      }
+
+      .main-nav {
+        gap: 12px;
+      }
+
+      .main-nav a {
+        font-size: 12px;
       }
     }
   </style>
@@ -125,28 +259,37 @@
 
 <body>
 
+  <!-- HEADER AND NAVIGATION -->
   <header>
     <div class="brand">Mindful Healing MSW</div>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#interests">Clinical Interests</a>
+      <a href="#resume">Résumé</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main>
-    <div class="hero">
 
+    <!-- HOME -->
+    <div class="hero" id="home">
       <div class="hero-text">
-        <div class="eyebrow">
-          Clinical Social Work Portfolio
-        </div>
+        <div class="eyebrow">Clinical Social Work Portfolio</div>
 
-        <h1>Compassion.<br>
-        Connection. Growth.</h1>
+        <h1>Compassion.<br>Connection. Growth.</h1>
 
         <p>
           Welcome to Mindful Healing MSW.
           I am a Master of Social Work student
-          pursuing clinical practice with a
-          focus on behavioral health,
-          emotional well-being, and
-          person-centered care.
+          pursuing clinical practice with a focus
+          on behavioral health, emotional well-being,
+          and person-centered care.
         </p>
 
         <a class="button" href="#about">
@@ -154,38 +297,239 @@
         </a>
       </div>
 
-    
-<img
-  src="sumit.png.png"
-  alt="Professional headshot"
-  class="photo-placeholder"
->
-
-
+      <img
+        src="sumit.png.png"
+        alt="Professional headshot"
+        class="profile-photo"
+      >
     </div>
 
+    <!-- ABOUT ME -->
     <section id="about">
       <h2>About Me</h2>
 
       <p>
-        My professional interests include
-        clinical social work, psychotherapy,
-        trauma-informed care, mindfulness,
-        and strengths-based practice.
+        I am a graduate social work student at
+        Boston University School of Social Work,
+        pursuing a clinical practice concentration
+        with a behavioral health specialization.
       </p>
 
       <p>
-        This portfolio highlights my education,
-        supervised clinical training,
-        professional experience, résumé,
-        and scholarly publications.
+        My professional interests include
+        psychotherapy, trauma-informed care,
+        mindfulness, emotional regulation,
+        and strengths-based approaches to
+        mental health and well-being.
+      </p>
+
+      <p>
+        I value empathy, cultural humility,
+        collaboration, and respect for each
+        individual's experiences and strengths.
+        My goal is to continue developing the
+        knowledge and clinical skills needed
+        to support individuals and communities
+        through meaningful therapeutic relationships.
       </p>
     </section>
+
+    <!-- CLINICAL AND PROFESSIONAL EXPERIENCE -->
+    <div class="soft-section">
+      <section id="experience">
+        <h2>Clinical &amp; Professional Experience</h2>
+
+        <p class="section-intro">
+          My experience includes supervised clinical
+          social work training, youth-centered
+          programming, supportive counseling,
+          and community-based services.
+        </p>
+
+        <div class="card-grid">
+
+          <div class="card">
+            <h3>Clinical Social Work Intern</h3>
+            <div class="muted">
+              EMDR Therapy Solutions &amp; Wellness |
+              September 2026 - Present
+            </div>
+            <p>
+              Participating in supervised clinical
+              training involving individual
+              psychotherapy, clinical assessments,
+              CBT-informed psychoeducation,
+              DBT skills group co-facilitation,
+              and clinical documentation.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Foundation Social Work Intern</h3>
+            <div class="muted">
+              MissionSAFE | January - August 2026
+            </div>
+            <p>
+              Supported youth and young adults through
+              case management, resource coordination,
+              group facilitation, mindfulness
+              activities, and educational and
+              career-development programming.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Crisis Support Experience</h3>
+            <div class="muted">
+              Crisis Text Line
+            </div>
+            <p>
+              Gained experience in empathetic
+              communication, active listening,
+              emotional support, and crisis
+              response within a structured
+              support environment.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Peer Support Experience</h3>
+            <div class="muted">
+              7 Cups
+            </div>
+            <p>
+              Provided supportive listening and
+              compassionate communication,
+              emphasizing validation,
+              nonjudgmental engagement,
+              and emotional well-being.
+            </p>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education</h2>
+
+      <div class="card-grid">
+
+        <div class="card">
+          <h3>Master of Social Work (MSW)</h3>
+          <div class="muted">
+            Boston University School of Social Work
+          </div>
+          <p>
+            Clinical Practice |
+            Behavioral Health Specialization
+          </p>
+          <p>Expected Graduation: December 2027</p>
+        </div>
+
+        <div class="card">
+          <h3>Bachelor of Science</h3>
+          <div class="muted">Northeastern University</div>
+          <p>Health Science</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CLINICAL INTERESTS -->
+    <div class="soft-section">
+      <section id="interests">
+        <h2>Clinical Interests &amp; Approaches</h2>
+
+        <p class="section-intro">
+          My developing clinical interests reflect
+          an integrative, person-centered,
+          culturally responsive, and
+          strengths-based perspective.
+        </p>
+
+        <div class="tag-list">
+          <span class="tag">Cognitive Behavioral Therapy (CBT)</span>
+          <span class="tag">Dialectical Behavior Therapy (DBT)</span>
+          <span class="tag">Psychodynamic Approaches</span>
+          <span class="tag">Trauma-Informed Care</span>
+          <span class="tag">Mindfulness-Based Practice</span>
+          <span class="tag">Strengths-Based Practice</span>
+          <span class="tag">Cultural Humility</span>
+          <span class="tag">Anxiety &amp; Depression</span>
+          <span class="tag">Emotional Regulation</span>
+          <span class="tag">Life Transitions</span>
+          <span class="tag">Adolescents &amp; Adults</span>
+          <span class="tag">Group Facilitation</span>
+        </div>
+      </section>
+    </div>
+
+    <!-- RESUME -->
+    <section id="resume">
+      <h2>Résumé / Curriculum Vitae</h2>
+
+      <p>
+        My professional résumé provides an overview
+        of my education, supervised clinical
+        training, relevant experience,
+        and professional development.
+      </p>
+
+      <p class="muted">
+        Résumé download will be available soon.
+      </p>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <div class="soft-section">
+      <section id="publications">
+        <h2>Publications &amp; Scholarly Work</h2>
+
+        <p>
+          This section highlights academic research,
+          scholarly contributions, and professional
+          interests relevant to my educational
+          background.
+        </p>
+
+        <p>
+          <a
+            href="https://doi.org/10.48550/arXiv.2101.04743"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Scholarly Publication
+          </a>
+        </p>
+      </section>
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact &amp; Professional Networking</h2>
+
+      <p>
+        Thank you for visiting Mindful Healing MSW.
+        I welcome opportunities for professional
+        networking, collaboration, and
+        continued learning in clinical social work.
+      </p>
+
+      <p class="muted">
+        Professional contact information
+        will be added here.
+      </p>
+    </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    Mindful Healing MSW |
-    Professional Clinical Social Work Portfolio
+    <p>Mindful Healing MSW</p>
+    <p>Professional Clinical Social Work Portfolio</p>
+    <p>Graduate Clinical Social Work Student | Supervised Training</p>
   </footer>
 
 </body>
