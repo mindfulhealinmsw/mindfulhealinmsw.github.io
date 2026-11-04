@@ -221,14 +221,64 @@
       font-size: 15px;
     }
 
-    /* EDUCATION */
+    /* LINKEDIN-STYLE EDUCATION */
 
-    .education-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+    .education-list {
+      margin-top: 25px;
     }
 
-    .education-grid .card {
-      padding: 25px;
+    .education-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 28px 0;
+      border-bottom: 1px solid #dce4dc;
+    }
+
+    .education-item:last-child {
+      border-bottom: none;
+    }
+
+    .education-logo {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .bu-logo {
+      background: #cc0000;
+    }
+
+    .nu-logo {
+      background: #c8102e;
+    }
+
+    .education-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .education-info h3 {
+      font-size: 20px;
+      margin: 0 0 6px;
+      color: var(--dark);
+    }
+
+    .education-info p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 5px 0;
+    }
+
+    .education-date {
+      color: #77867b;
     }
 
     /* CLINICAL INTERESTS */
@@ -302,9 +352,25 @@
         height: 300px;
       }
 
-      .card-grid,
-      .education-grid {
+      .card-grid {
         grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .education-item {
+        gap: 14px;
+      }
+
+      .education-logo {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        font-size: 20px;
+      }
+
+      .education-info h3 {
+        font-size: 17px;
       }
     }
 
@@ -324,10 +390,6 @@
       .main-nav a,
       .nav-dropdown summary {
         font-size: 13px;
-      }
-
-      .dropdown-menu {
-        right: 0;
       }
     }
   </style>
@@ -492,34 +554,44 @@
     <section id="education">
       <h2>Education</h2>
 
-      <div class="card-grid education-grid">
+      <div class="education-list">
 
-        <div class="card">
-          <h3>Master of Social Work (MSW)</h3>
-          <div class="muted">
-            Boston University School of Social Work
+        <div class="education-item">
+          <div class="education-logo bu-logo" aria-label="BU">BU</div>
+          <div class="education-info">
+            <h3>Boston University School of Social Work</h3>
+            <p>Master of Social Work (MSW), Clinical Practice</p>
+            <p class="education-date">
+              January 2025 – December 2027 (Expected)
+            </p>
+            <p>GPA: 4.0</p>
+            <p>Behavioral Health Specialization</p>
           </div>
-          <p>
-            Clinical Practice |
-            Behavioral Health Specialization
-          </p>
-          <p>Expected Graduation: December 2027</p>
         </div>
 
-        <div class="card">
-          <h3>Master of Science in Health Informatics (MSHI)</h3>
-          <div class="muted">
-            Northeastern University
+        <div class="education-item">
+          <div class="education-logo nu-logo" aria-label="NU">N</div>
+          <div class="education-info">
+            <h3>Northeastern University</h3>
+            <p>Khoury College of Computer Sciences</p>
+            <p>Master of Science (MS), Health Informatics</p>
+            <p class="education-date">
+              September 2018 – May 2022
+            </p>
+            <p>GPA: 3.8</p>
           </div>
-          <p>Health Informatics</p>
         </div>
 
-        <div class="card">
-          <h3>Bachelor of Science (BS)</h3>
-          <div class="muted">
-            Northeastern University
+        <div class="education-item">
+          <div class="education-logo nu-logo" aria-label="NU">N</div>
+          <div class="education-info">
+            <h3>Northeastern University</h3>
+            <p>Bachelor of Science (BS), Health Science</p>
+            <p class="education-date">
+              July 2015 – May 2018
+            </p>
+            <p>GPA: 3.61</p>
           </div>
-          <p>Health Science</p>
         </div>
 
       </div>
