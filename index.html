@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="mindfulhealingmsw | Clinical Social Work Portfolio">
   <title>mindfulhealingmsw | Clinical Social Work Portfolio</title>
+
+  <!-- Social Media Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
 
   <style>
     :root {
@@ -222,7 +227,7 @@
       font-size: 15px;
     }
 
-    /* EDUCATION: THREE COLUMNS */
+    /* EDUCATION */
 
     .education-grid {
       display: grid;
@@ -296,11 +301,63 @@
       color: #355c49;
     }
 
+    /* CONTACT AND NETWORKING */
+
+    .contact-section h2 {
+      font-size: 26px;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .contact-section p {
+      max-width: 800px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 13px 20px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: #355c49;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .social-link:hover {
+      background: var(--sage);
+    }
+
+    .social-link i {
+      font-size: 25px;
+    }
+
+    .social-link .fa-linkedin {
+      color: #0a66c2;
+    }
+
+    .social-link .fa-instagram {
+      color: #c13584;
+    }
+
     /* FOOTER */
 
     footer {
-      background: #2d4237;
-      color: #ffffff;
+      background: var(--dark);
+      color: white;
       text-align: center;
       padding: 25px 20px;
     }
@@ -358,6 +415,10 @@
       .main-nav a,
       .nav-dropdown summary {
         font-size: 13px;
+      }
+
+      .contact-section h2 {
+        font-size: 23px;
       }
     }
   </style>
@@ -524,7 +585,6 @@
 
       <div class="education-grid">
 
-        <!-- BOSTON UNIVERSITY -->
         <div class="education-card">
           <img
             src="BUSSW Logo.jpg"
@@ -533,7 +593,6 @@
           >
 
           <h3>Boston University School of Social Work</h3>
-
           <p>Master of Social Work (MSW), Clinical Practice</p>
 
           <p class="education-date">
@@ -544,7 +603,6 @@
           <p>Behavioral Health Specialization</p>
         </div>
 
-        <!-- KHOURY COLLEGE -->
         <div class="education-card">
           <img
             src="khoury_college_logo.jpg"
@@ -553,7 +611,6 @@
           >
 
           <h3>Khoury College of Computer Sciences</h3>
-
           <p>Master of Science (MS), Health Informatics</p>
 
           <p class="education-date">
@@ -563,7 +620,6 @@
           <p>GPA: 3.8</p>
         </div>
 
-        <!-- NORTHEASTERN UNIVERSITY -->
         <div class="education-card">
           <img
             src="northeastern_university_logo.jpg"
@@ -572,7 +628,6 @@
           >
 
           <h3>Northeastern University</h3>
-
           <p>Bachelor of Science (BS), Health Science</p>
 
           <p class="education-date">
@@ -655,20 +710,43 @@
     </div>
 
     <!-- CONTACT -->
-    <section id="contact">
+    <section id="contact" class="contact-section">
+
       <h2>Contact &amp; Professional Networking</h2>
 
       <p>
         Thank you for visiting mindfulhealingmsw.
         I welcome opportunities for professional
-        networking, collaboration, and
-        continued learning in clinical social work.
+        networking, collaboration, and continued
+        learning in clinical social work.
       </p>
 
-      <p class="muted">
-        Professional contact information
-        will be added here.
-      </p>
+      <div class="social-links">
+
+        <a
+          href="https://www.linkedin.com/in/sumitbaruasw/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="Visit my LinkedIn profile"
+        >
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          <span>LinkedIn</span>
+        </a>
+
+        <a
+          href="https://www.instagram.com/mindfulhealingmsw/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label="Visit my Instagram profile"
+        >
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          <span>Instagram</span>
+        </a>
+
+      </div>
+
     </section>
 
   </main>
