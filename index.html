@@ -3,14 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-        content="mindfulhealingmsw | Clinical Social Work Portfolio">
-
+  <meta name="description" content="mindfulhealingmsw | Clinical Social Work Portfolio">
   <title>mindfulhealingmsw | Clinical Social Work Portfolio</title>
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <style>
     :root {
@@ -18,7 +14,6 @@
       --green: #436b59;
       --sage: #eaf1e9;
       --cream: #faf9f5;
-      --white: #ffffff;
       --border: #e0e8df;
       --muted: #607467;
     }
@@ -41,7 +36,7 @@
     /* HEADER */
 
     header {
-      background: white;
+      background: #ffffff;
       padding: 25px 6%;
       border-bottom: 1px solid var(--border);
       display: flex;
@@ -57,6 +52,7 @@
       letter-spacing: -0.5px;
       color: #355c49;
       text-transform: lowercase;
+      text-decoration: none;
     }
 
     /* NAVIGATION */
@@ -103,7 +99,7 @@
       right: 0;
       top: 30px;
       min-width: 195px;
-      background: white;
+      background: #ffffff;
       border: 1px solid var(--border);
       border-radius: 10px;
       padding: 10px;
@@ -121,7 +117,7 @@
       background: var(--sage);
     }
 
-    /* HERO */
+    /* HOMEPAGE */
 
     .hero {
       min-height: 75vh;
@@ -165,7 +161,7 @@
       flex-shrink: 0;
     }
 
-    /* HOMEPAGE QUOTE */
+    /* SOCIAL WORK QUOTE */
 
     .hero-quote {
       margin-top: 28px;
@@ -203,31 +199,13 @@
       color: #52685b;
     }
 
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 30px;
-    }
-
-    .card {
-      background: white;
-      padding: 28px;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-    }
-
-    .card p {
-      margin-bottom: 0;
+    .soft-section {
+      background: #f0f4ef;
     }
 
     .muted {
       color: var(--muted);
       font-size: 15px;
-    }
-
-    .soft-section {
-      background: #f0f4ef;
     }
 
     a {
@@ -245,6 +223,26 @@
       font-size: 16px;
       line-height: 1.9;
       margin: 0 0 22px;
+    }
+
+    /* EXPERIENCE */
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .card p {
+      margin-bottom: 0;
     }
 
     /* EDUCATION */
@@ -489,7 +487,7 @@
   <!-- HEADER -->
 
   <header>
-    <div class="brand">mindfulhealingmsw</div>
+    <a href="index.html" class="brand">mindfulhealingmsw</a>
 
     <nav class="main-nav" aria-label="Main navigation">
       <a href="#home">Home</a>
@@ -499,6 +497,7 @@
 
       <details class="nav-dropdown">
         <summary>More</summary>
+
         <div class="dropdown-menu">
           <a href="#resume">Résumé</a>
           <a href="#publications">Publications</a>
@@ -514,6 +513,7 @@
 
     <div class="hero" id="home">
       <div class="hero-text">
+
         <div class="eyebrow">
           Clinical Social Work Portfolio
         </div>
@@ -536,8 +536,6 @@
           heard, valued, and understood.”
         </p>
       </div>
-
-      <!-- WORKING PROFESSIONAL PHOTOGRAPH -->
 
       <img
         src="sumit.png.png"
@@ -617,10 +615,9 @@
 
           <div class="card">
             <h3>Clinical Social Work Intern</h3>
-
             <div class="muted">
               EMDR Therapy Solutions &amp; Wellness |
-              September 2026 - Present
+              September 2026 – Present
             </div>
 
             <p>
@@ -635,9 +632,8 @@
 
           <div class="card">
             <h3>Foundation Social Work Intern</h3>
-
             <div class="muted">
-              MissionSAFE | January - August 2026
+              MissionSAFE | January – August 2026
             </div>
 
             <p>
@@ -906,3 +902,5 @@
 
 </body>
 </html>
+
+<!-- GitHub Pages redeployment - November 4, 2026 -->
