@@ -164,19 +164,18 @@
       flex-shrink: 0;
     }
 
-    .button {
-      display: inline-block;
-      margin-top: 20px;
-      background: var(--green);
-      color: white;
-      padding: 14px 25px;
-      border-radius: 7px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+    /* HOMEPAGE QUOTE */
 
-    .button:hover {
-      background: #355c49;
+    .hero-quote {
+      margin-top: 28px;
+      max-width: 480px;
+      font-size: 15px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.8;
+      color: #527a62;
+      border-left: 3px solid #91ad99;
+      padding-left: 18px;
     }
 
     /* GENERAL SECTIONS */
@@ -452,6 +451,14 @@
         height: 300px;
       }
 
+      .hero-quote {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        border-left: none;
+        padding-left: 0;
+      }
+
       .card-grid,
       .education-grid {
         grid-template-columns: 1fr;
@@ -540,9 +547,10 @@
           and person-centered care.
         </p>
 
-        <a class="button" href="#introduction">
-          Learn More About Me
-        </a>
+        <p class="hero-quote">
+          “Meaningful change begins when people feel
+          heard, valued, and understood.”
+        </p>
       </div>
 
       <img
@@ -606,7 +614,7 @@
       </p>
     </section>
 
-    <!-- ABOUT - PERSONAL CONTENT TO BE ADDED -->
+    <!-- ABOUT -->
 
     <section id="about" class="about-section">
       <h2>About</h2>
@@ -754,7 +762,7 @@
       </div>
     </section>
 
-    <!-- CLINICAL INTERESTS - STILL ON WEBSITE -->
+    <!-- CLINICAL INTERESTS -->
 
     <div class="soft-section">
       <section id="interests" class="clinical-section">
