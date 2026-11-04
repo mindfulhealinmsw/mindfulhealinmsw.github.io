@@ -7,10 +7,8 @@
   <title>mindfulhealingmsw | Clinical Social Work Portfolio</title>
 
   <!-- Social Media Icons -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  >
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <style>
     :root {
@@ -20,6 +18,7 @@
       --cream: #faf9f5;
       --white: #ffffff;
       --border: #e0e8df;
+      --muted: #607467;
     }
 
     * {
@@ -40,7 +39,7 @@
     /* HEADER */
 
     header {
-      background: var(--white);
+      background: white;
       padding: 25px 6%;
       border-bottom: 1px solid var(--border);
       display: flex;
@@ -77,7 +76,6 @@
     }
 
     .main-nav a:hover,
-    .main-nav a:focus-visible,
     .nav-dropdown summary:hover {
       color: #759b80;
     }
@@ -180,7 +178,7 @@
       background: #355c49;
     }
 
-    /* SECTIONS */
+    /* GENERAL SECTIONS */
 
     section {
       max-width: 1200px;
@@ -223,8 +221,16 @@
     }
 
     .muted {
-      color: #607467;
+      color: var(--muted);
       font-size: 15px;
+    }
+
+    .soft-section {
+      background: #f0f4ef;
+    }
+
+    a {
+      color: #355c49;
     }
 
     /* EDUCATION */
@@ -237,7 +243,7 @@
     }
 
     .education-card {
-      background: #ffffff;
+      background: white;
       border: 1px solid var(--border);
       border-radius: 14px;
       padding: 28px;
@@ -272,36 +278,58 @@
 
     /* CLINICAL INTERESTS */
 
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 25px;
-    }
-
-    .tag {
-      background: var(--sage);
-      color: #355c49;
-      padding: 12px 18px;
-      border-radius: 25px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .soft-section {
+    .clinical-section {
       background: #f0f4ef;
     }
 
-    .soft-section section {
-      padding-top: 75px;
-      padding-bottom: 75px;
+    .clinical-section h2 {
+      font-size: 30px;
+      margin-bottom: 18px;
     }
 
-    a {
+    .clinical-intro {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #52685b;
+      max-width: 850px;
+      margin-bottom: 36px;
+    }
+
+    .clinical-group {
+      margin-bottom: 30px;
+    }
+
+    .clinical-group h3 {
+      font-size: 21px;
+      font-weight: 600;
+      color: var(--dark);
+      margin: 0 0 18px;
+    }
+
+    .clinical-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .clinical-tag {
+      display: inline-block;
+      padding: 11px 16px;
+      border-radius: 25px;
+      background: #e3ece7;
       color: #355c49;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.4;
     }
 
-    /* CONTACT AND NETWORKING */
+    .clinical-divider {
+      border: 0;
+      border-top: 1px solid #d4dfd7;
+      margin: 35px 0;
+    }
+
+    /* CONTACT */
 
     .contact-section h2 {
       font-size: 26px;
@@ -417,6 +445,19 @@
         font-size: 13px;
       }
 
+      .clinical-section h2 {
+        font-size: 26px;
+      }
+
+      .clinical-group h3 {
+        font-size: 19px;
+      }
+
+      .clinical-tag {
+        font-size: 13px;
+        padding: 9px 13px;
+      }
+
       .contact-section h2 {
         font-size: 23px;
       }
@@ -427,6 +468,7 @@
 <body>
 
   <!-- HEADER -->
+
   <header>
     <div class="brand">mindfulhealingmsw</div>
 
@@ -451,6 +493,7 @@
   <main>
 
     <!-- HOME -->
+
     <div class="hero" id="home">
       <div class="hero-text">
         <div class="eyebrow">Clinical Social Work Portfolio</div>
@@ -478,6 +521,7 @@
     </div>
 
     <!-- ABOUT -->
+
     <section id="about">
       <h2>About Me</h2>
 
@@ -508,6 +552,7 @@
     </section>
 
     <!-- EXPERIENCE -->
+
     <div class="soft-section">
       <section id="experience">
         <h2>Clinical &amp; Professional Experience</h2>
@@ -580,6 +625,7 @@
     </div>
 
     <!-- EDUCATION -->
+
     <section id="education">
       <h2>Education</h2>
 
@@ -641,35 +687,74 @@
     </section>
 
     <!-- CLINICAL INTERESTS -->
+
     <div class="soft-section">
-      <section id="interests">
+      <section id="interests" class="clinical-section">
+
         <h2>Clinical Interests &amp; Approaches</h2>
 
-        <p class="section-intro">
+        <p class="clinical-intro">
           My developing clinical interests reflect
           an integrative, person-centered,
           culturally responsive, and
           strengths-based perspective.
         </p>
 
-        <div class="tag-list">
-          <span class="tag">Cognitive Behavioral Therapy (CBT)</span>
-          <span class="tag">Dialectical Behavior Therapy (DBT)</span>
-          <span class="tag">Psychodynamic Approaches</span>
-          <span class="tag">Trauma-Informed Care</span>
-          <span class="tag">Mindfulness-Based Practice</span>
-          <span class="tag">Strengths-Based Practice</span>
-          <span class="tag">Cultural Humility</span>
-          <span class="tag">Anxiety &amp; Depression</span>
-          <span class="tag">Emotional Regulation</span>
-          <span class="tag">Life Transitions</span>
-          <span class="tag">Adolescents &amp; Adults</span>
-          <span class="tag">Group Facilitation</span>
+        <!-- SPECIALTIES -->
+
+        <div class="clinical-group">
+          <h3>Specialties</h3>
+
+          <div class="clinical-tags">
+            <span class="clinical-tag">Anxiety</span>
+            <span class="clinical-tag">Depression</span>
+            <span class="clinical-tag">Trauma</span>
+            <span class="clinical-tag">Child &amp; Adolescent</span>
+            <span class="clinical-tag">Behavioral Issues</span>
+          </div>
         </div>
+
+        <!-- ADDITIONAL FOCUS AREAS -->
+
+        <div class="clinical-group">
+          <h3>Additional Focus Areas</h3>
+
+          <div class="clinical-tags">
+            <span class="clinical-tag">Stress</span>
+            <span class="clinical-tag">Life Transitions</span>
+            <span class="clinical-tag">Emotional Regulation</span>
+            <span class="clinical-tag">Identity Concerns</span>
+          </div>
+        </div>
+
+        <hr class="clinical-divider">
+
+        <!-- TREATMENT APPROACHES -->
+
+        <div class="clinical-group">
+          <h3>Treatment Approaches</h3>
+
+          <div class="clinical-tags">
+            <span class="clinical-tag">Cognitive Behavioral Therapy (CBT)</span>
+            <span class="clinical-tag">Psychodynamic Therapy</span>
+            <span class="clinical-tag">Strengths-Based Therapy</span>
+            <span class="clinical-tag">Mindfulness-Based Therapy</span>
+            <span class="clinical-tag">Group Therapy</span>
+            <span class="clinical-tag">Behavioral Therapy</span>
+            <span class="clinical-tag">Structural Family Therapy</span>
+            <span class="clinical-tag">Acceptance and Commitment Therapy (ACT)</span>
+            <span class="clinical-tag">Cognitive Processing Therapy (CPT)</span>
+            <span class="clinical-tag">Mindfulness-Based Cognitive Therapy (MBCT)</span>
+            <span class="clinical-tag">Solution-Focused Brief Therapy (SFBT)</span>
+            <span class="clinical-tag">Trauma-Focused Approaches</span>
+          </div>
+        </div>
+
       </section>
     </div>
 
     <!-- RESUME -->
+
     <section id="resume">
       <h2>Résumé / Curriculum Vitae</h2>
 
@@ -686,6 +771,7 @@
     </section>
 
     <!-- PUBLICATIONS -->
+
     <div class="soft-section">
       <section id="publications">
         <h2>Publications &amp; Scholarly Work</h2>
@@ -710,8 +796,8 @@
     </div>
 
     <!-- CONTACT -->
-    <section id="contact" class="contact-section">
 
+    <section id="contact" class="contact-section">
       <h2>Contact &amp; Professional Networking</h2>
 
       <p>
@@ -746,12 +832,12 @@
         </a>
 
       </div>
-
     </section>
 
   </main>
 
   <!-- FOOTER -->
+
   <footer>
     <p>mindfulhealingmsw</p>
     <p>&copy; Sumit Barua | 2026-2027</p>
